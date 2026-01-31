@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tama | Manga Store Directory</title>
+    <!-- Google Fonts: Nunito for rounded, friendly feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- PapaParse for CSV Parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="app-header">
+        <div class="logo-container">
+            <img src="assets/tama-logo.png" alt="Tama Logo" class="logo-image">
+        </div>
+        <p class="subtitle">
+            รวมร้านการ์ตูนสำหรับคนรักมังงะ
+            <span class="beta-tag">2026 Edition</span>
+        </p>
+    </header>
+
+    <main class="app-container">
+        <!-- Controls Section -->
+        <section class="controls-section">
+            <div class="search-container">
+                <i class="fa-solid fa-search search-icon"></i>
+                <input type="text" id="searchInput" placeholder="ค้นหาชื่อร้าน จังหวัด หรือเขต..."
+                    aria-label="ค้นหาร้านหนังสือ">
+            </div>
+
+            <div class="filter-container">
+                <span class="filter-label">จังหวัด:</span>
+                <div class="filter-chips" id="filterContainer">
+                    <!-- Filter chips will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Grid Section -->
+        <section class="store-grid" id="storeGrid">
+            <!-- Store cards will be injected here -->
+        </section>
+
+        <!-- No Results Message -->
+        <div id="noResults" class="no-results hidden">
+            <i class="fa-solid fa-cat fa-3x bounce"></i>
+            <p>ไม่พบร้านที่คุณค้นหา Meow?</p>
+        </div>
+    </main>
+
+    <footer class="app-footer">
+        <p>&copy; 2026 Tama Directory. Made with <i class="fa-solid fa-heart"></i> and <i class="fa-solid fa-paw"></i>.
+        </p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
