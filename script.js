@@ -98,7 +98,7 @@ function processData(rows) {
 
 // --- Helper: Google Drive Link Converter ---
 const getDirectLink = (url) => {
-  if (!url || url.trim() === '') return 'assets/tama-logo.png';
+  if (!url || url.trim() === '') return 'assets/tama-logo.png'; // Fallback to Logo
   const match = url.match(/[-\w]{25,}/);
   if (match) {
     // ใช้ lh3.googleusercontent.com/d/ID เป็นท่ามาตรฐานที่เสถียรที่สุด

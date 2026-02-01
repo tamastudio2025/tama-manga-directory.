@@ -40,7 +40,10 @@
 }
 
 body {
-    font-family: 'Nunito', 'Sarabun', sans-serif;
+    body {
+        font-family: 'Sarabun', sans-serif;
+    }
+
     /* Added Sarabun for Thai support if needed, or fallback */
     background-color: var(--color-bg);
     color: var(--color-text);
@@ -52,8 +55,10 @@ body {
 /* Header */
 .app-header {
     text-align: center;
-    /* Premium Gradient Background */
-    background: linear-gradient(135deg, #FFF8F2 0%, #FFFFFF 100%);
+    /* Dark overlay + Store Image */
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('assets/store.png');
+    background-size: cover;
+    background-position: center;
     padding: var(--spacing-xl) var(--spacing-md) 3rem;
     /* Adjusted bottom padding */
     position: relative;
@@ -61,18 +66,19 @@ body {
     /* Spans full width for background */
     margin-bottom: -2rem;
     /* Overlap effect with controls */
-    border-bottom: 1px solid rgba(255, 107, 53, 0.08);
+    border-bottom: none;
+    color: white;
+    /* Force white text */
 }
 
+/* Ensure Logo Shadow is strong against dark bg */
 .logo-image {
     max-width: 200px;
-    /* Slightly larger */
     height: auto;
     margin-bottom: var(--spacing-sm);
     display: inline-block;
-    /* Soft shadow for pop */
-    filter: drop-shadow(0 4px 6px rgba(255, 107, 53, 0.2));
-    /* Animation */
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+    /* Stronger shadow */
     animation: fadeScale 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
